@@ -1,0 +1,8 @@
+<div class='row-fluid'>
+	<div class='span2'>
+		<img src='<?= SITE_ROOT ?>img/palace.png'>
+	</div>
+	<div class='span10'>
+		A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. A description will go here. 
+	</div>
+</div>
