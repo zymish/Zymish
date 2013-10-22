@@ -4,8 +4,6 @@ require_once("includes/startup.php");
 $site['css'] = array();
 $site['css'][] = 'bootstrap.min.css';
 $site['css'][] = 'bootstrap-responsive.min.css';
-$site['css'][] = 'unicorn.main.css';
-$site['css'][] = 'unicorn.grey.css';
 /* JS Scripts */
 $site['js'] = array();
 $site['js'][] = 'excanvas.min.js';

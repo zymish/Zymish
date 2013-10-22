@@ -14,24 +14,44 @@
 			<?if(is_array($site['css'])) foreach($site['css'] as $file){ ?>
 				<link rel='stylesheet' href='css/<?=$file;?>'>
 			<?}?>
+		<link href='<?=SITE_ROOT?>css/zymish.css' rel='stylesheet'>
 		<script src='js/modernizr-2.6.2-respond-1.1.0.min.js'></script>
 		<script src='js/jquery.min.js'></script>
 	</head>
    <body>
-		<div id='header'>
-			<h1><a href='http://zymish.com'>Zymish Dot Com</a></h1>		
-		</div>            
-		<div id='sidebar'>
-			<?require_once('sidebar.php');?>
-		</div>
-        <div id='content'>
-        	<div id='content-header'>
-						<h1><?=isset($ch) && !empty($ch)?$ch:'Zymish Dot Com';?></h1>
-					</div>
-					<?if(isset($errors)&&is_array($errors)) foreach($errors as $error){?>
-						<div class="alert alert-<?= $error['type'] ?>" style="width:400px; margin:12px auto;">
-							<?=isset($error['icon'])?"<i class='".$error['icon']."'></i>&nbsp;":''?>
-							<?=isset($error['msg'])?$error['msg']:''?>
-						</div>
+		<div id='wrapper'>
+			<div id='top'>
+				<div class='navbar navbar-default'>
+					<a class='navbar-brand' href='<?=SITE_ROOT?>'><i class='icon-home'></i><span class='hidden-phone'> Zymish Dot Com</span></a>
+					<?if(isset($projects)&&is_array($projects)&&count($projects)>0){?>
+						<ul class='nav navbar-nav'>
+							<li class='dropdown<?=$site['page'][1]=='projects'?' active':''?>'>
+								<a class='dropdown-toggle' data-toggle='dropdown' href='#'>Projects <i class='icon-caret-down'></i></a>
+								<ul class='dropdown-menu' role='menu'>
+									<?foreach($projects as $project){?>
+										<li>
+											<a href='<?=SITE_ROOT.'projects/'.$project['slug']?>'><?=$project['name']?></a>
+										</li>
+									<?}?>
+								</ul>
+							</li>
+						</ul>
+						<script type='text/javascript'>
+							$(document).ready(function(){
+								$('.dropdown-toggle').dropdown();
+							});
+						</script>
 					<?}?>
-					<div class="container-fluid">
+				</div>
+			</div>
+			<div id='content' class='col-xs-10'>
+				<div id='content-header'>
+					<h3><?=isset($ch) && !empty($ch)?$ch:'Zymish Dot Com';?></h3>
+				</div>
+				<?if(isset($errors)&&is_array($errors)) foreach($errors as $error){?>
+					<div class="alert alert-<?= $error['type'] ?>" style="width:400px; margin:12px auto;">
+						<?=isset($error['icon'])?"<i class='".$error['icon']."'></i>&nbsp;":''?>
+						<?=isset($error['msg'])?$error['msg']:''?>
+					</div>
+				<?}?>
+				<div class="container-fluid">
