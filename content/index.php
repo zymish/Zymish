@@ -1,6 +1,6 @@
 <div class='row'>
 	<div class='col-sm-3 hidden-phone'>
-		<img src='http://placehold.it/300&text=Generic+Image'>
+		<img class='img-responsive' src='http://placehold.it/300&text=Generic+Image'>
 	</div>
 	<div class='col-sm-9'>
 		<p>Bacon ipsum dolor sit amet aliquip pork belly cupidatat occaecat laboris. Est biltong drumstick ex. Deserunt pancetta ut, kevin mollit corned beef shank. Ground round aute jerky turkey boudin jowl. Ad swine elit ball tip, turkey culpa brisket veniam voluptate spare ribs short loin. Nisi laborum commodo pastrami leberkas ullamco consectetur flank fatback. Tempor drumstick reprehenderit ribeye ground round.</p>

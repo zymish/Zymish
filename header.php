@@ -8,13 +8,10 @@
       <meta name='viewport' content='width=device-width, initial-scale=1.0'>
       <link rel='icon' type='image/png' href='<?= SITE_ROOT ?>img/favicon.png'>
 		<link rel='stylesheet' type='text/css' media='screen' href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/themes/smoothness/jquery-ui.css'>
-		<link href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/css/bootstrap.no-icons.min.css' rel='stylesheet'>
-		<link href='//netdna.bootstrapcdn.com/font-awesome/2.0/css/font-awesome.css' rel='stylesheet'>
-		<link href='//netdna.bootstrapcdn.com/font-awesome/2.0/css/font-awesome-ie7.css' rel='stylesheet'>
+		<link href='//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'>
 			<?if(is_array($site['css'])) foreach($site['css'] as $file){ ?>
-				<link rel='stylesheet' href='css/<?=$file;?>'>
+				<link rel='stylesheet' href='<?php echo SITE_ROOT.'/css/'.$file;?>'>
 			<?}?>
-		<link href='<?=SITE_ROOT?>css/zymish.css' rel='stylesheet'>
 		<script src='js/modernizr-2.6.2-respond-1.1.0.min.js'></script>
 		<script src='js/jquery.min.js'></script>
 	</head>
@@ -26,7 +23,7 @@
 					<?if(isset($projects)&&is_array($projects)&&count($projects)>0){?>
 						<ul class='nav navbar-nav'>
 							<li class='dropdown<?=$site['page'][1]=='projects'?' active':''?>'>
-								<a class='dropdown-toggle' data-toggle='dropdown' href='#'>Projects <i class='icon-caret-down'></i></a>
+								<a class='dropdown-toggle' data-toggle='dropdown'>Projects <i class='icon-caret-down'></i></a>
 								<ul class='dropdown-menu' role='menu'>
 									<?foreach($projects as $project){?>
 										<li>

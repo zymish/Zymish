@@ -1,2 +1,7 @@
 <? $proj=$site['page'][2];
-var_dump($proj);?>
+if(!empty($proj))
+	include('projects/'.$proj.'.php');
+else{
+	include('overview.php');
+}
+?>
